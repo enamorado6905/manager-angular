@@ -1,0 +1,110 @@
+<nz-table
+  class="table-list"
+  nzShowSizeChanger
+  [nzTitle]="HEADER"
+  [nzSize]="infoDivice.isDiviceMovil() ? 'small' : 'default'"
+  [nzData]="listEntitis.list"
+  [nzFrontPagination]="false"
+  [nzLoading]="listEntitis.initLoading"
+  [nzTotal]="listEntitis.allData"
+  [(nzPageIndex)]="listEntitis.pageIndex"
+  (nzQueryParams)="onQueryParamsChange($event)"
+  [nzScroll]="{ x: '1100px', y: '60vh' }"
+>
+  <thead>
+    <tr>
+      <th
+        [nzSelections]="listEntitis.listOfSelection"
+        [nzChecked]="listEntitis.checked"
+        [nzIndeterminate]="listEntitis.indeterminate"
+        (nzCheckedChange)="listEntitis.onAllChecked($event)"
+      >
+        <app-item-button-operation
+          *ngIf="listEntitis.setOfCheckedId.size > 1"
+          [nzSize]="'small'"
+          [text]="'button.delete-all'"
+          style="margin-left: 20px"
+          [nzDanger]="true"
+          (click)="comunication.openDeletesDate(routerDelete)"
+        ></app-item-button-operation>
+      </th>
+      <th *ngFor="let itemLabel of arrayLabel">
+        {{ itemLabel.label | translate }}
+      </th>
+      <th>{{ "app-content.label.operation" | translate }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listEntitis.list">
+      <td
+        [nzChecked]="listEntitis.setOfCheckedId.has(item._id!)"
+        (nzCheckedChange)="listEntitis.onItemChecked(item._id!, $event)"
+      ></td>
+      <ng-container *ngIf="type === 'UserAdm'">
+        <td>
+          {{ item?.fullName! }}
+        </td>
+        <td>{{ item?.active | yesNo }}</td>
+        <td>{{ item?.isVerified! | yesNo }}</td>
+      </ng-container>
+      <ng-container *ngIf="type === 'User'">
+        <td>{{ item?.fullName! }}</td>
+        <td>{{ item?.active! | yesNo }}</td>
+        <td>{{ item?.isVerified! | yesNo }}</td>
+      </ng-container>
+      <ng-container *ngIf="type === 'Category'">
+        <td>{{ item?.name! }}</td>
+        <td>{{ item?.active! | yesNo }}</td>
+      </ng-container>
+      <ng-container *ngIf="type === 'SizeProduct'">
+        <td>{{ item?.size! }}</td>
+        <td>{{ item?.bust! }}</td>
+        <td>{{ item?.waist! }}</td>
+        <td>{{ item?.hips! }}</td>
+        <td>{{ item?.active! | yesNo }}</td>
+      </ng-container>
+      <ng-container *ngIf="type === 'ColorProduct'">
+        <td>{{ item?.name! }}</td>
+        <td>{{ item?.active! | yesNo }}</td>
+      </ng-container>
+      <ng-container *ngIf="type === 'Product'">
+        <td></td>
+        <td>{{ item?.name! }}</td>
+        <td>{{ item?.quantityProducts! }}</td>
+        <td>
+          <p *ngFor="let category of item?.category!">{{ category?.name! }}</p>
+        </td>
+        <td>{{ item?.active! | yesNo }}</td>
+      </ng-container>
+      <ng-container
+        *ngIf="
+          type === 'Rol' ||
+          type === 'Permission' ||
+          type === 'PermissionDefault'
+        "
+      >
+        <td>{{ item?.name! }}</td>
+        <td>{{ item?.active! | yesNo }}</td>
+        <td>{{ item?.isProtected! | yesNo }}</td>
+      </ng-container>
+      <td>
+        <app-operation
+          [size]="listEntitis.setOfCheckedId.size"
+          (emitOpenShow)="comunication.openShowDate(routerShow, item?._id!)"
+          (emitOpenEdit)="comunication.openEditDate(routerEdit, item?._id!)"
+          (emitOpenDelete)="
+            comunication.openDeleteDate(routerDelete, item?._id!)
+          "
+        ></app-operation>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+<ng-template #HEADER>
+  <app-item-search-value
+    [typeEntiti]="type"
+    (outputValue)="fillValue = $event; search()"
+    (outputVerified)="fillVerified = $event; search()"
+    (outputActive)="fillActive = $event; search()"
+  ></app-item-search-value>
+</ng-template>

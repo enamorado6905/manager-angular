@@ -1,0 +1,44 @@
+<div nz-row class="pt-lg">
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24">
+    <nz-card class="card" [nzTitle]="'app-content.label.add-date' | translate">
+      <form class="form" nz-form [formGroup]="data" (ngSubmit)="sendData()">
+        <div class="card-form-body" nz-row [nzGutter]="[8, 8]">
+          <div
+            *ngFor="let item of arrayInput"
+            nz-col
+            nzXs="24"
+            nzSm="24"
+            nzMd="24"
+            nzLg="12"
+          >
+            <app-component-form-input
+              [data]="data"
+              [label]="item.label"
+              [id]="item.id"
+              [typeEntiti]="item?.typeEntiti!"
+              [type]="item.type!"
+              [typeNz]="item?.typeNz!"
+              [isrequired]="item.isrequired"
+              [isautofocus]="item.isautofocus"
+              [placeholder]="item.placeholder"
+              [placeholderRequired]="item?.placeholderRequired!"
+              [placeholderPattern]="item?.placeholderPattern!"
+              [placeholderMinlength]="item?.placeholderMinlength!"
+              [placeholderMaxlength]="item?.placeholderMaxlength!"
+            ></app-component-form-input>
+          </div>
+        </div>
+        <div class="card-form-fotter" nz-row [nzGutter]="[8, 8]">
+          <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="12">
+            <nz-button-group class="buttons">
+              <app-item-button-send
+                [disabled]="data.invalid"
+              ></app-item-button-send>
+              <app-item-button-reset (click)="reset()"></app-item-button-reset>
+            </nz-button-group>
+          </div>
+        </div>
+      </form>
+    </nz-card>
+  </div>
+</div>

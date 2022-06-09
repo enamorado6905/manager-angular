@@ -1,0 +1,75 @@
+<nz-drawer
+  [nzMaskClosable]="nzZorro.maskClosableDrawer"
+  [nzVisible]="comunication.openOperation"
+  nzPlacement="right"
+  [nzTitle]="'app-content.label.show-date' | translate"
+  (nzOnClose)="destroy()"
+  [nzWidth]="nzZorro.nzWidthDrawer"
+>
+  <ng-container *nzDrawerContent>
+    <div class="drawer">
+      <div class="drawer-content">
+        <nz-descriptions
+          [nzColumn]="nzZorro.nzColumn"
+          [nzTitle]="'app-content.label.person' | translate"
+        >
+          <nz-descriptions-item
+            [nzTitle]="'validation.name.label' | translate"
+            [nzSpan]="1"
+          >
+            <nz-tag [nzColor]="'#2db7f5'">{{ user?.fullName! }} </nz-tag>
+          </nz-descriptions-item>
+        </nz-descriptions>
+        <nz-divider></nz-divider>
+        <nz-descriptions
+          [nzColumn]="nzZorro.nzColumn"
+          [nzTitle]="'app-content.label.contacts' | translate"
+        >
+          <nz-descriptions-item
+            [nzTitle]="'validation.email.label' | translate"
+            [nzSpan]="1"
+          >
+            <nz-tag [nzColor]="'#2db7f5'">
+              {{ user?.email! }}
+            </nz-tag></nz-descriptions-item
+          >
+        </nz-descriptions>
+        <nz-divider></nz-divider>
+        <nz-descriptions
+          [nzColumn]="nzZorro.nzColumn"
+          [nzTitle]="'app-content.label.status' | translate"
+        >
+          <nz-descriptions-item
+            [nzTitle]="'app-content.label.created' | translate"
+            [nzSpan]="1"
+          >
+            <nz-tag [nzColor]="'#2db7f5'">
+              {{ user?.createdAt! | date }}
+            </nz-tag>
+          </nz-descriptions-item>
+          <nz-descriptions-item
+            [nzTitle]="'app-content.label.update' | translate"
+            [nzSpan]="1"
+            ><nz-tag [nzColor]="'#2db7f5'">
+              {{ user?.updatedAt! | date }}
+            </nz-tag></nz-descriptions-item
+          >
+          <nz-descriptions-item
+            [nzTitle]="'validation.active.label' | translate"
+            [nzSpan]="1"
+          >
+            <nz-tag [nzColor]="'#2db7f5'"> {{ user?.active! | yesNo }} </nz-tag>
+          </nz-descriptions-item>
+          <nz-descriptions-item
+            [nzTitle]="'validation.verified.label' | translate"
+            [nzSpan]="1"
+          >
+            <nz-tag [nzColor]="'#2db7f5'">
+              {{ user?.isVerified! | yesNo }}
+            </nz-tag>
+          </nz-descriptions-item>
+        </nz-descriptions>
+      </div>
+    </div>
+  </ng-container>
+</nz-drawer>

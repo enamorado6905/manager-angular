@@ -1,0 +1,19 @@
+<nz-select
+  nzMode="multiple"
+  nzAllowClear
+  [nzLoading]="initLoading"
+  [nzPlaceHolder]="'validation.rol.placeholder' | translate"
+  [(ngModel)]="idPermissions"
+  (ngModelChange)="sendIPermission()"
+>
+  <ng-container *ngFor="let option of permissions">
+    <nz-option
+      *ngIf="permissions"
+      [nzValue]="option?.name"
+      [nzLabel]="option.name"
+    ></nz-option>
+  </ng-container>
+  <nz-option *ngIf="!permissions" nzDisabled [nzCustomContent]="true">
+    <i nz-icon nzType="loading" class="loading-icon"></i> Loading Data...
+  </nz-option>
+</nz-select>

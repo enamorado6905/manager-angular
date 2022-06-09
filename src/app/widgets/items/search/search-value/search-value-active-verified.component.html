@@ -1,0 +1,34 @@
+<div nz-row class="pt-lg">
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24">
+    <form class="form" nz-form [formGroup]="data">
+      <div class="card-form-body" nz-row [nzGutter]="[8, 8]">
+        <div
+          *ngFor="let item of arrayInput"
+          nz-col
+          nzXs="24"
+          nzSm="24"
+          nzMd="24"
+          nzLg="8"
+        >
+          <app-component-form-input
+            [data]="data"
+            [label]="item.label"
+            [id]="item.id"
+            [type]="item?.type!"
+            [listOfSelect]="item?.listOfSelect!"
+            [typeNz]="item?.typeNz!"
+            [notShowLabel]="item?.notShowLabel!"
+            [isrequired]="item.isrequired"
+            [isautofocus]="item.isautofocus"
+            [placeholder]="item.placeholder"
+            [nzHasFeedback]="item?.nzHasFeedback!"
+            [placeholderRequired]="item?.placeholderRequired!"
+            [placeholderPattern]="item?.placeholderPattern!"
+            [placeholderMinlength]="item?.placeholderMinlength!"
+            [placeholderMaxlength]="item?.placeholderMaxlength!"
+          ></app-component-form-input>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

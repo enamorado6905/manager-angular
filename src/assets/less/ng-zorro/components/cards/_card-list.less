@@ -1,0 +1,39 @@
+@import "base";
+
+.card-list {
+  .table-list {
+    tbody tr .img-names {
+      position: relative;
+      overflow: hidden;
+
+      app-avatar {
+        height: max-content;
+        width: max-content;
+        display: inline-block;
+        vertical-align: middle;
+        img {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+        }
+      }
+      p {
+        width: min-content;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display: inline-block;
+        font-weight: 600;
+        font-size: 14px;
+        font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+        vertical-align: middle;
+        letter-spacing: 0.29px;
+        text-align: center;
+      }
+    }
+  }
+  .pagination-left {
+    float: right;
+    margin: 20px 20px 20px auto;
+  }
+}

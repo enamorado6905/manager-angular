@@ -1,0 +1,84 @@
+<div class="trigger-item">
+  <i
+    nz-icon
+    nzType="user"
+    nzTheme="outline"
+    class="info-user"
+    nz-dropdown
+    [nzDropdownMenu]="menus === 'menuMovil' ? menuMovil : menuNoMovil"
+    [nzPlacement]="'bottomLeft'"
+    [nzTrigger]="NzConfiguration.clickHover"
+    (nzVisibleChange)="changeLayout()"
+  >
+    <div class="text-info-user" id="dropdown-info-user">
+      nameeee
+      <i nz-icon nzType="down"></i>
+    </div>
+    <nz-dropdown-menu #menuMovil="nzDropdownMenu">
+      <ul nz-menu class="menuSettingsUser">
+        <div *ngFor="let item of listItem">
+          <li nz-menu-divider *ngIf="item.divider"></li>
+          <li
+            nz-menu-item
+            *ngIf="!item.nzDanger && !item.submenu"
+            (click)="toggle(item.type)"
+          >
+            {{ item.name | translate }}
+          </li>
+          <li nz-submenu *ngIf="item.submenu" [nzTitle]="item.name | translate">
+            <ul>
+              <div *ngFor="let themeItem of item.listItem">
+                <li nz-menu-item (click)="toggle(themeItem.type)">
+                  {{ themeItem.name | translate }}
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li
+            nz-menu-item
+            nzDanger
+            *ngIf="item.nzDanger"
+            (click)="toggle(item.type)"
+          >
+            {{ item.name | translate }}
+          </li>
+        </div>
+      </ul>
+    </nz-dropdown-menu>
+    <nz-dropdown-menu #menuNoMovil="nzDropdownMenu">
+      <ul nz-menu class="menuSettingsUser">
+        <li id="li-infoUser" nz-menu-item class="info-user">
+          <div class="text-info-user" id="dropdown-info-user">Nameeee</div>
+        </li>
+        <li id="li-divideInfoUser" nz-menu-divider></li>
+        <div *ngFor="let item of listItem">
+          <li nz-menu-divider *ngIf="item.divider"></li>
+          <li
+            nz-menu-item
+            *ngIf="!item.nzDanger && !item.submenu"
+            (click)="toggle(item.type)"
+          >
+            {{ item.name | translate }}
+          </li>
+          <li nz-submenu *ngIf="item.submenu" [nzTitle]="item.name | translate">
+            <ul>
+              <div *ngFor="let themeItem of item.listItem">
+                <li nz-menu-item (click)="toggle(themeItem.type)">
+                  {{ themeItem.name | translate }}
+                </li>
+              </div>
+            </ul>
+          </li>
+          <li
+            nz-menu-item
+            nzDanger
+            *ngIf="item.nzDanger"
+            (click)="toggle(item.type)"
+          >
+            {{ item.name | translate }}
+          </li>
+        </div>
+      </ul>
+    </nz-dropdown-menu>
+  </i>
+</div>

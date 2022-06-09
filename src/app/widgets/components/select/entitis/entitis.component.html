@@ -1,0 +1,31 @@
+<nz-select
+  [nzMode]="typeSelect"
+  nzAllowClear
+  [nzPlaceHolder]="nzPlaceHolder | translate"
+  [nzLoading]="initLoading"
+  [(ngModel)]="ids"
+  (ngModelChange)="sendICategory()"
+>
+  <ng-container *ngFor="let option of entitis">
+    <nz-option
+      *ngIf="
+        entitis &&
+        (typeEntiti === 'ColorProduct' ||
+          typeEntiti === 'PermissionDefault' ||
+          typeEntiti === 'Permission' ||
+          typeEntiti === 'Rol' ||
+          typeEntiti === 'Category')
+      "
+      [nzValue]="option._id"
+      [nzLabel]="option.name"
+    ></nz-option>
+    <nz-option
+      *ngIf="entitis && typeEntiti === 'SizeProduct'"
+      [nzValue]="option._id"
+      [nzLabel]="option.size"
+    ></nz-option>
+  </ng-container>
+  <nz-option *ngIf="!entitis" nzDisabled [nzCustomContent]="true">
+    <i nz-icon nzType="loading" class="loading-icon"></i> Loading Data...
+  </nz-option>
+</nz-select>

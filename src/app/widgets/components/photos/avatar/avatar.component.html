@@ -1,0 +1,13 @@
+<div class="content-image">
+  <div class="content-loading" [@imageAnimation]="contentCtrl">
+    <div class="thumb-overlay">
+      <div class="sk-folding-cube">
+        <div class="sk-cube1 sk-cube"></div>
+        <div class="sk-cube2 sk-cube"></div>
+        <div class="sk-cube4 sk-cube"></div>
+        <div class="sk-cube3 sk-cube"></div>
+      </div>
+    </div>
+  </div>
+  <img [@imageAnimation]="imageCtrl" #lImage alt="" [src]="SRC" />
+</div>

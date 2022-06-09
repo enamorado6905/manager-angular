@@ -1,0 +1,32 @@
+<a
+  nz-button
+  nzType="link"
+  [disabled]="!disabled"
+  [nzTooltipTitle]="'app-content.label.show-date' | translate"
+  nzTooltipPlacement="top"
+  nz-tooltip
+  (click)="emitShow()"
+  ><i nz-icon nzType="eye" nzTheme="outline"></i
+></a>
+<nz-divider nzType="vertical"></nz-divider>
+<a
+  nz-button
+  nzType="link"
+  [disabled]="!disabled"
+  [nzTooltipTitle]="'app-content.label.edit-date' | translate"
+  nzTooltipPlacement="top"
+  nz-tooltip
+  (click)="emitEdit()"
+  ><i nz-icon nzType="edit" nzTheme="outline"></i
+></a>
+<nz-divider nzType="vertical"></nz-divider>
+<a
+  nz-button
+  nzType="link"
+  [disabled]="!disabled"
+  [nzTooltipTitle]="'app-content.label.delete-date' | translate"
+  nzTooltipPlacement="top"
+  nz-tooltip
+  (click)="emitDelete()"
+  ><i nz-icon nzType="delete" nzTheme="outline"></i
+></a>

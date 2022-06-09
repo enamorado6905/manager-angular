@@ -1,0 +1,16 @@
+<div nz-row class="pt-lg">
+  <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="24">
+    <nz-card class="card-list" [nzBodyStyle]="{ padding: 0 }">
+      <app-component-list
+        [allData]="listEntitis.allData"
+        [pageIndex]="listEntitis.pageIndex"
+        [typeEntiti]="'UserAdm'"
+        [routerShow]="routerShow()"
+        [routerEdit]="routerEdit()"
+        [routerDelete]="routerDelete()"
+        [skip]="listEntitis.skip"
+        [limit]="listEntitis.limit"
+      ></app-component-list>
+    </nz-card>
+  </div>
+</div>

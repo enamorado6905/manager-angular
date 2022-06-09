@@ -1,0 +1,46 @@
+@media (max-width: @width472) {
+  .card-dropdown-menu {
+    height: 50vh;
+    width: 200px;
+  }
+}
+@media (min-width: @width472) {
+  .card-dropdown-menu {
+    height: 50vh;
+    width: 300px;
+  }
+}
+
+// DEVICES WHTH DISPLAY <=767
+@media (max-width: @width767) {
+  .app-sidebar {
+    display: none;
+  }
+
+  .app-content {
+    margin: auto 5px auto 5px;
+  }
+
+  .app-header {
+    padding: 0 10px;
+
+    .content-notmovil {
+      display: none;
+    }
+  }
+}
+
+// DEVICES WHTH DISPLAY >=768
+@media (min-width: @width768) {
+  .app-header {
+    padding: 0 25px;
+
+    .content-movil {
+      display: none;
+    }
+  }
+
+  .app-content {
+    margin: auto 0.5em;
+  }
+}

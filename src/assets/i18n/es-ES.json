@@ -1,0 +1,343 @@
+{
+  "app-sidebar": {
+    "label": {
+      "closed-session": "Cerrar Sección",
+      "info-user": "Información del usuario",
+      "menu-link-sub-Manage": "Gestionar",
+      "menu-link-sub-Security": "Seguridad",
+      "menu-link-sub-Setting": "Configuración",
+      "menu-link-sub-Manage-sub-adm": "ADM",
+      "menu-link-sub-Manage-sub-user": "Usuario",
+      "menu-link-sub-Manage-sub-product": "Producto",
+      "menu-link-sub-Manage-sub-category": "Categoria",
+      "menu-link-sub-Manage-sub-colorProduct": "Color del Producto",
+      "menu-link-sub-Manage-sub-sizeProduct": "Size del Producto",
+      "menu-link-sub-Manage-sub-uploadPhoto": "Subir Photo",
+      "menu-link-sub-Security-sub-permissionDefault": "Permisos Default",
+      "menu-link-sub-Security-sub-rol": "Rol",
+      "menu-link-sub-Security-sub-permission": "Permisos",
+      "menu-link-sub-Manage-sub-1": "Adicionar",
+      "menu-link-sub-Manage-sub-2": "Gestionar"
+    }
+  },
+  "app-nav": {
+    "icon-name": {
+      "tab-home": "Bienvenido",
+      "tab-sidebar": "Operar con barra lateral",
+      "tab-themes": "Temas",
+      "tab-block-seccion": "Bloqueo de Sección"
+    }
+  },
+  "app-content": {
+    "label": {
+      "yes": "Si",
+      "no": "No",
+      "isNullUndefined": "El elemento es existe",
+      "loading-data": "Cargando Datos",
+      "operation": "Operación",
+      "list-date": "Listado Datos",
+      "add-date": "Adicionar Datos",
+      "edit-date": "Editar Datos",
+      "show-date": "Mostrar Datos",
+      "delete-date": "Eliminar Datos",
+      "deletes-date": "Eliminar Todo",
+      "edit-rol": "Editar Rol",
+      "edit-permissions": "Editar Permisos",
+      "data": "Datos",
+      "person": "Personal",
+      "roles-permissions": "Roles y Permisos",
+      "contacts": "Contactos",
+      "status": "Estado",
+      "created": "Creado",
+      "update": "Actualizado",
+      "rol": "Rol",
+      "date": "Fecha de Creado",
+      "permissions": "Permisos",
+      "race": "Carrera",
+      "contact": "Contacto",
+      "typecontact": "Tipo de contacto",
+      "adm": "Administrador",
+      "permission": "Permisos",
+      "input-search": "Escribir parametro de busqueda",
+      "link-entity": "Vincular Entidad",
+      "dayW": [
+        "Lunes",
+        "Martes",
+        "Miércoles",
+        "Jueves",
+        "Viernes",
+        "Sábado",
+        "Domingo"
+      ]
+    }
+  },
+  "themes": {
+    "dark": "Oscuro",
+    "default": "Default",
+    "aliyun": "Aliyun",
+    "compact": "Compacto"
+  },
+  "language": {
+    "translate": "Traducir",
+    "english": "Inglés",
+    "spanish": "Español",
+    "change-language": "Cambio de idioma a: {{icon}} {{language}}.",
+    "use-language": "Idioma en uso: {{icon}} {{language}}.",
+    "error-change-language": "Error al cambio de idioma a: {{icon}} {{language}}."
+  },
+  "notification": {
+    "success": "Sactifactorio",
+    "error": "Error",
+    "warning": "Advertencia",
+    "info": "Informacion",
+    "operation-success": "Operación Sactifactoria",
+    "operation-error": "Oh!!!,A ocurrido algun error",
+    "tab-themes": "Cambio de tema a {{theme}}",
+    "tab-block-seccion": "Sección cerrada",
+    "tab-sidebar-open": "Barra lateral expandida",
+    "tab-sidebar-closed": "Barra lateral reducida",
+    "delete-confirm": "Esta seguro de eliminar este entidad?",
+    "deletes-confirm": "Esta seguro de eliminar todos las entitidades?"
+  },
+  "auth": {
+    "message-invalid-credentials": "El nombre de usuario o la contraseña son incorrectos.",
+    "message-valid-credentials": "Bienvenido {{user}}, registro sactifactorio.",
+    "message-invalid-refresh-token": "Sección Cerrarada",
+    "welcome": "Bienvenido",
+    "remember-me": "Recordarme",
+    "gologin": "ir a login",
+    "forgot-password": "Has olvidado tú contraseña?",
+    "sign-in-with": "Loguearse con",
+    "login": "Loguearse",
+    "valid-email": "Validar Correo",
+    "change-password": "Cambiar Contraseña"
+  },
+  "validation": {
+    "size": {
+      "label": "Tamaño",
+      "placeholder": "Entre un tamaño",
+      "required": "Por favor entre un tamaño!"
+    },
+    "bust": {
+      "label": "Busto",
+      "placeholder": "Entre medida de busto",
+      "required": "Por favor entre medida de busto!"
+    },
+    "waist": {
+      "label": "Cintura",
+      "placeholder": "Entre medida de cintura",
+      "required": "Por favor entre medida de cintura!"
+    },
+    "hips": {
+      "label": "Cadera",
+      "placeholder": "Entre medida de cadera",
+      "required": "Por favor entre medida de cadera!"
+    },
+    "email": {
+      "label": "Correo",
+      "placeholder": "Entre su correo",
+      "required": "Por favor escriba su correo electrónico",
+      "wrong-format": "El formato del correo es incorrecto",
+      "present-BD": "El correo electrónico se encuentra en la Base de Datos"
+    },
+    "password": {
+      "label": "Contraseña",
+      "label-old": "Contraseña actual",
+      "label-new": "Contraseña nueva",
+      "label-rep": "Repita la contraseña",
+      "placeholder": "Entre su contraseña",
+      "required": "Por favor escriba su contraseña",
+      "twice": "La contraseña ingresada no coencide.",
+      "strength.msg": "Ingrese al menos 6 caracteres y no use contraseñas que sean fáciles de adivinar",
+      "strength.strong": "Fuerza: fuerte",
+      "strength.medium": "Fuerza: medio",
+      "strength.short": "Fuerza: demaciado corta",
+      "confirm-password.required": "Por favor confirme su contraseña",
+      "confirm-password.notequeal": "La contraseña no coencide con la nueva contraseña"
+    },
+    "name": {
+      "label": "Nombre",
+      "placeholder": "Entre su nombre",
+      "required": "Por favor entre su nombre!",
+      "invalid": "Nombre es invalido, tiene que empezar [A-ZÁÉÍÓÚ], luego tiene que contener [a-zñáéíóú]",
+      "invalid_min": "Nombre invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Nombre invalido, tiene que contener menos de 70 caracteres"
+    },
+    "nametwo": {
+      "label": "Segundo Nombre",
+      "placeholder": "Entre su segundo nombre",
+      "invalid": "Segundo Nombre es invalido, tiene que empezar [A-ZÁÉÍÓÚ], luego tiene que contener [a-zñáéíóú]",
+      "invalid_min": "Segundo Nombre invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Segundo Nombre invalido, tiene que contener menos de 30 caracteres"
+    },
+    "lastnameone": {
+      "label": "Primer Apellido",
+      "placeholder": "Entre su primer apellido",
+      "required": "Por favor entre su primer apellido!",
+      "invalid": "Primer apellido es invalido, tiene que empezar [A-ZÁÉÍÓÚ], luego tiene que contener [a-zñáéíóú]",
+      "invalid_min": "Primer apellido invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Primer apellido invalido, tiene que contener menos de 70 caracteres"
+    },
+    "lastnametwo": {
+      "label": "Segundo Apellido",
+      "placeholder": "Entre su segundo apellido",
+      "required": "Por favor entre su segundo apellido!",
+      "invalid": "Segundo apellido es invalido, tiene que empezar [A-ZÁÉÍÓÚ], luego tiene que contener [a-zñáéíóú]",
+      "invalid_min": "Segundo apellido invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Segundo apellido invalido, tiene que contener menos de 70 caracteres"
+    },
+    "surnames": {
+      "label": "Apellidos",
+      "placeholder": "Entre sus Apellidos",
+      "required": "Por favor entre sus apellidos!",
+      "invalid": "Apellidos es invalido, tiene que empezar [A-ZÁÉÍÓÚ], luego tiene que contener [a-zñáéíóú]",
+      "invalid_min": "Apellidos invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Apellidos apellido invalido, tiene que contener menos de 70 caracteres"
+    },
+    "gender": {
+      "label": "Genero",
+      "placeholder": "Entre un genero",
+      "required": "Por favor entre un genero!",
+      "invalid": "Genero es invalido, tiene que empezar [A-ZÁÉÍÓÚ], luego tiene que contener [a-zñáéíóú]",
+      "invalid_min": "Genero invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Genero invalido, tiene que contener menos de 70 caracteres"
+    },
+    "rol": {
+      "label": "Selecionar Rol",
+      "placeholder": "Entre un rol",
+      "required": "Por favor entre un rol!"
+    },
+    "permission": {
+      "label-select": "Selecionar Permisos",
+      "label": "Permiso",
+      "placeholder": "Entre un permiso",
+      "required": "Por favor entre un permiso!"
+    },
+    "active": {
+      "label": "Activo",
+      "placeholder": "Desea activar la entidad?",
+      "required": "Por favor selecione una opcion!"
+    },
+    "protected": {
+      "label": "Protegido",
+      "placeholder": "Desea proteger la entidad?",
+      "required": "Por favor selecione una opcion!"
+    },
+    "description": {
+      "label": "Descripción",
+      "placeholder": "Entre una descripción",
+      "required": "Por favor entre una descripción!",
+      "invalid_min": "Descripción invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Descripción invalido, tiene que contener menos de 70 caracteres"
+    },
+    "verified": {
+      "label": "Verificacion",
+      "placeholder": "Selecione una opcion",
+      "required": "Por favor entre una opcion!"
+    },
+    "category": {
+      "label": "Categoría",
+      "placeholder": "Selecione una categoría",
+      "required": "Por favor entre una categoría!"
+    },
+    "value": {
+      "label": "Valor",
+      "placeholder": "Entre un valor",
+      "required": "Por favor entre un valor!"
+    },
+    "session": {
+      "label": "Sesion",
+      "placeholder": "Selecione una opcion",
+      "required": "Por favor selecione una opcion!"
+    },
+    "title": {
+      "label": "Titulo",
+      "placeholder": "Entre un titulo",
+      "required": "Por favor entre un titulo!",
+      "invalid_min": "Titulo invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Titulo invalido, tiene que contener menos de 70 caracteres"
+    },
+    "photo": {
+      "label": "Foto",
+      "logo": "Logo"
+    },
+    "file": {
+      "name": "Nombre",
+      "size": "tamaño",
+      "type": "Formato",
+      "uid": "Uid"
+    },
+    "year": {
+      "label": "Año",
+      "placeholder": "Entre un año",
+      "required": "Por favor entre un año!"
+    },
+    "position": {
+      "label": "Posición",
+      "placeholder": "Entre un posición",
+      "required": "Por favor entre un posición!"
+    },
+    "organization": {
+      "label": "Organización",
+      "placeholder": "Entre un organización",
+      "required": "Por favor entre un organización!"
+    },
+    "province": {
+      "label": "Provincia",
+      "placeholder": "Entre una provincia",
+      "required": "Por favor entre una provincia!"
+    },
+    "duration": {
+      "label": "Duracion",
+      "placeholder": "Entre una duracion",
+      "required": "Por favor entre una duracion!"
+    },
+    "country": {
+      "label": "Pais",
+      "placeholder": "Entre un pais ",
+      "required": "Por favor entre un pais!"
+    },
+    "isathome": {
+      "label": "A Domicilio",
+      "placeholder": "Desea activar el servivio a domicilio?",
+      "required": "Por favor selecione una opcion!"
+    },
+    "address": {
+      "label": "Direccion",
+      "placeholder": "Entre un direccion",
+      "required": "Por favor entre un direccion!",
+      "invalid_min": "direccion invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Direccion invalido, tiene que contener menos de 70 caracteres"
+    },
+    "phone": {
+      "label": "Numero de Telefono",
+      "placeholder": "Enter a numero de telefono",
+      "required": "Por favor entre un numero de telefono!",
+      "invalid_min": "Numero de Telefono invalido, tiene que contener mas de 3 caracteres",
+      "invalid_max": "Numero de Telefono invalido, tiene que contener menos de 70 caracteres"
+    }
+  },
+  "button": {
+    "send": "Enviar",
+    "cancel": "Cancelar",
+    "ok": "Aceptar",
+    "search": "Buscar",
+    "upload": "Subir",
+    "reset": "Borrar",
+    "clear": "Limpiar",
+    "delete-all": "Eliminar todo",
+    "add-input": "Adicionar input"
+  },
+  "card": {
+    "title-info": "Información",
+    "title-delete": "!Atención!",
+    "title-edit": "Editar Datos",
+    "title-edit-password": "Editar Contraseña"
+  },
+  "filter": {
+    "names-email": "filter for names and email",
+    "name": "filtrar por nombre",
+    "verified": "filtar por verificado",
+    "active": "filtar por activo"
+  }
+}

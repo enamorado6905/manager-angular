@@ -1,0 +1,234 @@
+<nz-form-label
+  *ngIf="!notShowLabel && isrequired"
+  [nzNoColon]="true"
+  nzRequired
+  [nzFor]="id"
+  >{{ label | translate }}
+</nz-form-label>
+<nz-form-label
+  *ngIf="!notShowLabel && !isrequired"
+  [nzNoColon]="true"
+  [nzFor]="id"
+  >{{ label | translate }}
+</nz-form-label>
+<nz-form-item *ngIf="nzFormItem === 'default'">
+  <nz-form-control [nzErrorTip]="TplInput" [nzHasFeedback]="nzHasFeedback">
+    <div [formGroup]="data" *ngIf="typeNz == 'nzSelect'">
+      <nz-select
+        nzAllowClear
+        [formControlName]="id"
+        [nzPlaceHolder]="placeholder | translate"
+      >
+        <nz-option
+          *ngFor="let option of listOfSelect"
+          [nzLabel]="option"
+          [nzValue]="option"
+        ></nz-option>
+      </nz-select>
+    </div>
+    <div [formGroup]="data" *ngIf="typeNz == 'nzSelectEntiti'">
+      <app-select-entits
+        [typeEntiti]="typeEntiti"
+        [typeSelect]="typeSelect"
+        class="search-selects-entitis"
+        [nzPlaceHolder]="placeholder"
+        [addEntiti]="this.data.get(id)?.value"
+        (idEntitis)="this.data.get(id)?.setValue($event)"
+      >
+      </app-select-entits>
+    </div>
+    <nz-input-group [formGroup]="data" *ngIf="typeNz == 'nzInput'">
+      <input
+        nz-input
+        [required]="isrequired"
+        [autofocus]="isautofocus"
+        [id]="id"
+        [type]="type"
+        [placeholder]="placeholder | translate"
+        [formControlName]="id"
+      />
+    </nz-input-group>
+    <nz-input-group [formGroup]="data" *ngIf="typeNz == 'nzTimePicker'">
+      <nz-time-picker
+        [formControlName]="id"
+        [nzDefaultOpenValue]="defaultOpenValue"
+      ></nz-time-picker>
+    </nz-input-group>
+    <nz-input-group [formGroup]="data" *ngIf="typeNz == 'nzTextarea'">
+      <textarea
+        type="text"
+        nz-input
+        [formControlName]="id"
+        [placeholder]="placeholder | translate"
+      ></textarea>
+    </nz-input-group>
+    <nz-input-group [formGroup]="data" *ngIf="typeNz == 'nzCheckbox'">
+      <label nz-checkbox [formControlName]="id">{{
+        "validation.active.placeholder" | translate
+      }}</label>
+    </nz-input-group>
+    <nz-input-group
+      *ngIf="typeNz == 'nzSelectnumber'"
+      [formGroup]="data"
+      [nzAddOnBefore]="addOnBeforeTemplate"
+    >
+      <ng-template #addOnBeforeTemplate>
+        <nz-select class="phone-select" formControlName="code">
+          <nz-option
+            *ngFor="let option of listOfOptionCode"
+            [nzLabel]="option"
+            [nzValue]="option"
+          ></nz-option>
+        </nz-select>
+      </ng-template>
+      <input
+        nz-input
+        [id]="id"
+        [type]="type"
+        [placeholder]="placeholder | translate"
+        [formControlName]="id"
+      />
+    </nz-input-group>
+  </nz-form-control>
+  <ng-template #TplInput let-control>
+    <ng-container *ngIf="control.hasError('required')">
+      {{ placeholderRequired | translate }}
+    </ng-container>
+    <ng-container *ngIf="control.hasError('pattern')">
+      {{ placeholderPattern | translate }}
+    </ng-container>
+    <ng-container *ngIf="control.hasError('minlength')">
+      {{ placeholderMinlength | translate }}
+    </ng-container>
+    <ng-container *ngIf="control.hasError('maxlength')">
+      {{ placeholderMaxlength | translate }}
+    </ng-container>
+  </ng-template>
+</nz-form-item>
+<div nz-row [nzGutter]="24" *ngIf="nzFormItem === 'accountingProduct'">
+  <div
+    nz-col
+    nzXs="12"
+    nzSm="8"
+    nzMd="8"
+    nzLg="6"
+    [nzSpan]="6"
+    *ngFor="let control of listOfControlAccounting; let i = index"
+  >
+    <nz-form-item>
+      <nz-form-control [formGroup]="data" [nzHasFeedback]="nzHasFeedback">
+        <nz-input-group>
+          <input
+            nz-input
+            type="number"
+            min="0"
+            max="100000"
+            [placeholder]="'validation.amount.placeholder' | translate"
+            [formControlName]="control.amount"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [formGroup]="data" [nzHasFeedback]="nzHasFeedback">
+        <app-select-entits
+          class="search-selects-entitis"
+          [typeEntiti]="'ColorProduct'"
+          [nzPlaceHolder]="'validation.colorProduct.placeholder'"
+          [addEntiti]="this.data.get(control.color)?.value"
+          (idEntitis)="this.data.get(control.color)?.setValue($event)"
+          [attr.id]="control.id"
+        >
+        </app-select-entits>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-control [formGroup]="data" [nzHasFeedback]="nzHasFeedback">
+        <app-select-entits
+          [typeEntiti]="'SizeProduct'"
+          class="search-selects-entitis"
+          [nzPlaceHolder]="'validation.sizeProduct.placeholder'"
+          [addEntiti]="this.data.get(control.size)?.value"
+          (idEntitis)="this.data.get(control.size)?.setValue($event)"
+          [attr.id]="control.id"
+        >
+        </app-select-entits>
+      </nz-form-control>
+    </nz-form-item>
+    <app-item-button-operation
+      class="delete-button"
+      [text]="'button.delete-file'"
+      [nzType]="'dashed'"
+      [nzDanger]="true"
+      [nzBlock]="true"
+      [nzIcon]="true"
+      [nzTypeIcon]="'minus'"
+      (click)="removeFieldAccounting(control, $event)"
+    >
+    </app-item-button-operation>
+  </div>
+  <nz-form-item>
+    <nz-form-control
+      [nzXs]="{ span: 0, offset: 0 }"
+      [nzSm]="{ span: 0, offset: 0 }"
+    >
+      <app-item-button-operation
+        class="delete-button"
+        [text]="'button.add-file'"
+        [nzType]="'dashed'"
+        [nzBlock]="true"
+        [nzIcon]="true"
+        [nzTypeIcon]="'plus'"
+        (click)="addFieldAccounting($event)"
+      >
+      </app-item-button-operation>
+    </nz-form-control>
+  </nz-form-item>
+</div>
+<div nz-row [nzGutter]="24" *ngIf="nzFormItem === 'photos'">
+  <div
+    nz-col
+    nzXs="12"
+    nzSm="8"
+    nzMd="8"
+    nzLg="6"
+    [nzSpan]="6"
+    *ngFor="let control of listOfControlPhoto; let i = index"
+  >
+    <nz-form-item>
+      <app-addphoto
+        [photo]="this.data.get(control.photo)?.value"
+        (nzUploadFile)="this.data.get(control.photo)?.setValue($event)"
+        [attr.id]="control.id"
+      ></app-addphoto>
+    </nz-form-item>
+    <app-item-button-operation
+      class="delete-button"
+      [text]="'button.delete-file'"
+      [nzType]="'dashed'"
+      [nzDanger]="true"
+      [nzBlock]="true"
+      [nzIcon]="true"
+      [nzTypeIcon]="'minus'"
+      (click)="removeFieldPhoto(control, $event)"
+    >
+    </app-item-button-operation>
+  </div>
+  <nz-form-item>
+    <nz-form-control
+      [nzXs]="{ span: 0, offset: 0 }"
+      [nzSm]="{ span: 0, offset: 0 }"
+    >
+      <app-item-button-operation
+        class="delete-button"
+        [text]="'button.add-file'"
+        [nzType]="'dashed'"
+        [nzBlock]="true"
+        [nzIcon]="true"
+        [nzTypeIcon]="'plus'"
+        (click)="addFieldPhoto($event)"
+      >
+      </app-item-button-operation>
+    </nz-form-control>
+  </nz-form-item>
+</div>

@@ -1,0 +1,420 @@
+{
+  "app-sidebar": {
+    "label": {
+      "closed-session": "Sign Off",
+      "info-user": "User Info",
+      "menu-link-sub-Manage": "Manage",
+      "menu-link-sub-Security": "Security",
+      "menu-link-sub-Setting": "Setting",
+      "menu-link-sub-Manage-sub-adm": "ADM",
+      "menu-link-sub-Manage-sub-user": "User",
+      "menu-link-sub-Manage-sub-product": "Product",
+      "menu-link-sub-Manage-sub-category": "Category",
+      "menu-link-sub-Manage-sub-colorProduct": "Color Product",
+      "menu-link-sub-Manage-sub-sizeProduct": "Size Product",
+      "menu-link-sub-Manage-sub-uploadPhoto": "Upload Photo",
+      "menu-link-sub-Security-sub-permissionDefault": "Permission Default",
+      "menu-link-sub-Security-sub-rol": "Rol",
+      "menu-link-sub-Security-sub-permission": "Permission",
+      "menu-link-sub-Manage-sub-1": "Add",
+      "menu-link-sub-Manage-sub-2": "Manage"
+    }
+  },
+  "app-nav": {
+    "icon-name": {
+      "tab-home": "Welcome",
+      "tab-sidebar": "Trade with sidebar",
+      "tab-themes": "Themes",
+      "tab-block-seccion": "Block Seccion"
+    }
+  },
+  "app-content": {
+    "label": {
+      "yes": "Yes",
+      "no": "No",
+      "isNullUndefined": "The element does not exist",
+      "loading-data": "Loading Data",
+      "operation": "Operation",
+      "list-date": "Date List",
+      "add-date": "Date Add",
+      "edit-date": "Date Edit",
+      "show-date": "Date Show",
+      "delete-date": "Date Delete",
+      "deletes-date": "All Delete",
+      "edit-rol": "Rol Edit",
+      "edit-permissions": "Permissions Edit",
+      "data": "Data",
+      "person": "Person",
+      "roles-permissions": "Roles and Permissions",
+      "contacts": "Contacts",
+      "status": "Status",
+      "created": "Craeted",
+      "update": "Update",
+      "rol": "Rol",
+      "date": "Date",
+      "permissions": "Permissions",
+      "race": "Race",
+      "contact": "Contact",
+      "categorys": "Categorys",
+      "accounting": "Accounting",
+      "details": "Details",
+      "typecontact": "Type Contact",
+      "adm": "Administrador",
+      "permission": "Permission",
+      "input-search": "Writer search parameter ",
+      "link-entity": "Link Entity",
+      "dayW": [
+        "Monday",
+        "Thesday",
+        "Wendnesday",
+        "Thesday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    }
+  },
+  "themes": {
+    "dark": "Dark",
+    "default": "Default",
+    "aliyun": "Aliyun",
+    "compact": "Compact"
+  },
+  "language": {
+    "translate": "Translate",
+    "english": "English",
+    "spanish": "Spanish",
+    "change-language": "Change of language to: {{icon}} {{language}}.",
+    "use-language": "Language in use: {{icon}} {{language}}.",
+    "error-change-language": "Error change oflanguage to: {{icon}} {{language}}."
+  },
+  "notification": {
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Info",
+    "operation-success": "Success Operation",
+    "operation-error": "Oh!!!,Some error has occurred",
+    "tab-themes": "Change themes to {{theme}}",
+    "tab-block-seccion": "Closed seccion",
+    "tab-sidebar-open": "Expanded sidebar",
+    "tab-sidebar-closed": "Reduced sidebar",
+    "delete-confirm": "Are you sure delete this entiti?",
+    "deletes-confirm": "Are you sure delete all entitis?"
+  },
+  "auth": {
+    "message-invalid-credentials": "Invalid username or password.",
+    "message-valid-credentials": "Welcome {{user}}, success login.",
+    "message-invalid-refresh-token": "Closed Seccion",
+    "welcome": "Welcome",
+    "remember-me": "Remember me",
+    "gologin": "go to login",
+    "forgot-password": "Forgot your password?",
+    "sign-in-with": "Sign in with",
+    "login": "Login",
+    "valid-email": "Email Valid",
+    "change-password": "Password Change"
+  },
+  "validation": {
+    "price": {
+      "label": "Price",
+      "placeholder": "Enter a price",
+      "required": "Please enter a price!"
+    },
+    "quantityProducts": {
+      "label": "Quantity Products",
+      "placeholder": "Enter a quantity products",
+      "required": "Please enter a quantity products!"
+    },
+    "isDiscount": {
+      "label": "Is it on discount?",
+      "placeholder": "Enter a discount",
+      "required": "Please enter a discount!"
+    },
+    "previousPrice": {
+      "label": "previous price",
+      "placeholder": "Enter a price",
+      "required": "Please enter a price!"
+    },
+    "closure": {
+      "label": "Closure",
+      "placeholder": "Enter a closure",
+      "required": "Please enter a closure!"
+    },
+    "details": {
+      "label": "Details",
+      "placeholder": "Enter a details",
+      "required": "Please enter a details!"
+    },
+    "fabric": {
+      "label": "Fabric",
+      "placeholder": "Enter a fabric",
+      "required": "Please enter a fabric!"
+    },
+    "typeLength": {
+      "label": "Type Length",
+      "placeholder": "Enter a type length",
+      "required": "Please enter a type length!"
+    },
+    "neckLine": {
+      "label": "Neck Line",
+      "placeholder": "Enter a neck line",
+      "required": "Please enter a neck line!"
+    },
+    "waistLine": {
+      "label": "Waist Line",
+      "placeholder": "Enter a waist line",
+      "required": "Please enter a waist line!"
+    },
+    "accounting": {
+      "label": "Accounting",
+      "placeholder": "Enter a accounting",
+      "required": "Please enter a accounting!"
+    },
+    "amount": {
+      "label": "Amount",
+      "placeholder": "Enter a amount",
+      "required": "Please enter a amount!"
+    },
+    "size": {
+      "label": "Size",
+      "placeholder": "Enter a size",
+      "required": "Please enter a size!"
+    },
+    "color": {
+      "label": "Color",
+      "placeholder": "Enter a color",
+      "required": "Please enter a color!"
+    },
+    "bust": {
+      "label": "Bust",
+      "placeholder": "Enter a bust",
+      "required": "Please enter a bust!"
+    },
+    "waist": {
+      "label": "Waist",
+      "placeholder": "Enter a waist",
+      "required": "Please enter a waist!"
+    },
+    "hips": {
+      "label": "Hips",
+      "placeholder": "Enter a hips",
+      "required": "Please enter a hips!"
+    },
+    "colorProduct": {
+      "label": "Color Product",
+      "placeholder": "Enter a color",
+      "required": "Please enter a color!"
+    },
+    "sizeProduct": {
+      "label": "Size Product",
+      "placeholder": "Enter a size",
+      "required": "Please enter a size!"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter your email",
+      "required": "Please enter your email!",
+      "wrong-format": "The email address is in the wrong format!",
+      "present-BD": "The email is present in Date Base"
+    },
+    "password": {
+      "label": "Password",
+      "label-old": "Active password",
+      "label-new": "New password",
+      "label-rep": "Repeat password",
+      "placeholder": "Enter your password",
+      "required": "Please enter your password!",
+      "twice": "The passwords entered twice do not match!",
+      "strength.msg": "Please enter at least 6 characters and don't use passwords that are easy to guess.",
+      "strength.strong": "Strength: strong",
+      "strength.medium": "Strength: medium",
+      "strength.short": "Strength: too short",
+      "confirm-password.required": "Please confirm your password!",
+      "confirm-password.notequeal": "Password is not equelas a new password"
+    },
+    "name": {
+      "label": "Name",
+      "placeholder": "Enter your name",
+      "required": "Please enter your name!",
+      "invalid": "Invalid name, must have begin [A-ZÁÉÍÓÚ], then it have to contain [a-zñáéíóú]",
+      "invalid_min": "Name is invalid,must have more than 3 characters",
+      "invalid_max": "Name is invalid,must less more than 70 characters"
+    },
+    "nametwo": {
+      "label": "Second name",
+      "placeholder": "Enter your sacond name",
+      "required": "Please enter your Second name!",
+      "invalid": "Invalid second name, must have begin [A-ZÁÉÍÓÚ], then it have to contain [a-zñáéíóú]",
+      "invalid_min": "Second name is invalid,must have more than 3 characters",
+      "invalid_max": "Second name is invalid,must less more than 70 characters"
+    },
+    "lastnameone": {
+      "label": "Surname",
+      "placeholder": "Enter your surname",
+      "required": "Please enter your Surname!",
+      "invalid": "Invalid surname, must have begin [A-ZÁÉÍÓÚ], then it have to contain [a-zñáéíóú]",
+      "invalid_min": "Surname is invalid,must have more than 3 characters",
+      "invalid_max": "Surname is invalid,must less more than 70 characters"
+    },
+    "lastnametwo": {
+      "label": "Second surname",
+      "placeholder": "Enter your second surname",
+      "required": "Please enter your second surname!",
+      "invalid": "Invalid second surname, must have begin [A-ZÁÉÍÓÚ], then it have to contain [a-zñáéíóú]",
+      "invalid_min": "Second surname is invalid,must have more than 3 characters",
+      "invalid_max": "Second surname is invalid,must less more than 70 characters"
+    },
+    "surnames": {
+      "label": "Surnames",
+      "placeholder": "Enter your surnames",
+      "required": "Please enter your surnames!",
+      "invalid": "Invalid surnames, must have begin [A-ZÁÉÍÓÚ], then it have to contain [a-zñáéíóú]",
+      "invalid_min": "Surnames is invalid,must have more than 3 characters",
+      "invalid_max": "Surnames is invalid,must less more than 70 characters"
+    },
+    "rol": {
+      "label": "Select Rol",
+      "placeholder": "Enter a rol",
+      "required": "Please enter a rol!"
+    },
+    "permission": {
+      "label-select": "Select Permissions",
+      "label": "Permission",
+      "placeholder": "Entre Permission",
+      "required": "Please enter a permission!"
+    },
+    "active": {
+      "label": "Active",
+      "placeholder": "Do you want the active entiti?",
+      "required": "Please select a option!"
+    },
+    "protected": {
+      "label": "Protected",
+      "placeholder": "Do you want the protected entiti?",
+      "required": "Please select a option!"
+    },
+    "description": {
+      "label": "Description",
+      "placeholder": "Enter a description",
+      "required": "Please enter a description!",
+      "invalid_min": "Description is invalid,must have more than 3 characters",
+      "invalid_max": "Description is invalid,must less more than 150 characters"
+    },
+    "verified": {
+      "label": "Verified",
+      "placeholder": "Select a option",
+      "required": "Please enter a option!"
+    },
+    "category": {
+      "label": "Category",
+      "placeholder": "Select a category",
+      "required": "Please enter a category!"
+    },
+    "value": {
+      "label": "Value",
+      "placeholder": "Enter a value",
+      "required": "Please enter a value!"
+    },
+    "session": {
+      "label": "Session",
+      "placeholder": "Select a option",
+      "required": "Please select a option!"
+    },
+    "title": {
+      "label": "Title",
+      "placeholder": "Enter a title",
+      "required": "Please enter a title!",
+      "invalid_min": "Title is invalid,must have more than 3 characters",
+      "invalid_max": "Title is invalid,must less more than 70 characters"
+    },
+    "photo": {
+      "label": "Photo",
+      "logo": "Logo"
+    },
+    "file": {
+      "name": "Name",
+      "size": "Size",
+      "type": "Type",
+      "uid": "Uid"
+    },
+    "year": {
+      "label": "Year",
+      "placeholder": "Enter a year",
+      "required": "Please enter a year!"
+    },
+    "position": {
+      "label": "Position",
+      "placeholder": "Enter a position",
+      "required": "Please enter a position!"
+    },
+    "organization": {
+      "label": "Organization",
+      "placeholder": "Enter a organization",
+      "required": "Please enter a organization!"
+    },
+    "province": {
+      "label": "Province",
+      "placeholder": "Enter a province",
+      "required": "Please enter a province!"
+    },
+    "duration": {
+      "label": "Duration",
+      "placeholder": "Enter a duration",
+      "required": "Please enter a duration!"
+    },
+    "country": {
+      "label": "Country",
+      "placeholder": "Enter a country",
+      "required": "Please enter a country!"
+    },
+    "isathome": {
+      "label": "At Home",
+      "placeholder": "Do you want the active service?",
+      "required": "Please Check!"
+    },
+    "address": {
+      "label": "Adress",
+      "placeholder": "Enter a address",
+      "required": "Please enter a address!",
+      "invalid_min": "Address is invalid,must have more than 3 characters",
+      "invalid_max": "Adress is invalid,must less more than 70 characters"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "Enter a phone",
+      "required": "Please enter a phone!",
+      "invalid_min": "Phone is invalid,must have more than 3 characters",
+      "invalid_max": "Phone is invalid,must less more than 70 characters"
+    },
+    "permissionDefault": {
+      "label": "Permission Default",
+      "placeholder": "Enter a permission default"
+    }
+  },
+  "button": {
+    "send": "Send",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "search": "Search",
+    "reset": "Reset",
+    "upload": "Upload",
+    "clear": "Clear",
+    "delete-file": "Delete filed",
+    "add-file": "Add filed",
+    "delete-all": "Delete all",
+    "add-input": "Add input"
+  },
+  "card": {
+    "title-info": "Info",
+    "title-delete": "Atention!",
+    "title-edit": "Edit Date",
+    "title-edit-password": "Edit Password"
+  },
+  "filter": {
+    "names-email": "filter for names and email",
+    "name": "filter for name",
+    "verified": "filter for verified",
+    "active": "filter for active"
+  }
+}
